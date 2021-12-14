@@ -19,6 +19,7 @@ if (program.server) {
 
 var client = stun.createClient();
 client.setServerAddr(serverAddr, +program.port);
+client.setLocalAddr('0.0.0.0', '23563');
 client.start(function (result) {
     var mapped = client.getMappedAddr();
     console.log([
